@@ -1,0 +1,10 @@
+{
+  "bob": {
+    "password": "12345678",
+    "permissions": ["user"]
+  },
+  "fred": {
+    "password": "12345678",
+    "permissions": ["user", "admin"]
+  }
+}
