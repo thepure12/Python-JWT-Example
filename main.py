@@ -65,6 +65,16 @@ def invalidateAll():
   # Change jwt_key until next restart
   plugin.jwt_key = ''.join(random.choice("qwertyuioplkjhgfdsazxcvbnm") for i in range(10))
   return {"message": "all token are now invalid"}
+
+@app.route("/cart", method=["GET"], permissions=["user"])
+def cart():
+  try:
+    carts = json.load(open("carts.json"))
+    username = request.user["username"]
+    user_cart = carts[username]
+    return {"cart": user_cart}
+  except Exception as e:
+    return {"message": str(e)}
   
 # Start server
 app.run(host="0.0.0.0", debug=debug, reloader=True)

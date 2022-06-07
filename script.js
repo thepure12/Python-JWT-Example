@@ -55,6 +55,13 @@ async function invalidateTokens() {
   document.querySelector("#res").value = JSON.stringify(data, null, 2);
 }
 
+async function getCart() {
+  document.querySelector("#res").value = ""
+  console.log("Getting cart for user")
+  data = await doRequest("/cart", "GET")
+  document.querySelector("#res").value = JSON.stringify(data, null, 2);
+}
+
 // Add more gets here
 
 
