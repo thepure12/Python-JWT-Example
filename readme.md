@@ -1,13 +1,11 @@
-Required packages
+# Required packages
 
-Bottle
--
+## Bottle
 ```
 pip install bottle
 ```
 
-PyJWT
--
+## PyJWT
 ```
 pip install PyJWT
 ```
