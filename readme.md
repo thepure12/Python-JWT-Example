@@ -9,3 +9,8 @@ pip install bottle
 ```
 pip install PyJWT
 ```
+
+## Run
+```
+python3 main.py
+```
